@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "description": "IM-style desktop email client compatible with standard IMAP/SMTP, featuring Agent-driven config.toml and DPAPI secret vault",
+    "homepage": "https://github.com/arrake0101/mailchat",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/arrake0101/mailchat/releases/download/v0.2.0/MailChat_0.2.0_x64-portable.zip",
+            "hash": "4be361db3a7db3321b9394c4520b8852ca1d3b20a24aa8ef7167c72d645e2d85"
+        }
+    },
+    "bin": "mailchat.exe",
+    "shortcuts": [
+        [
+            "mailchat.exe",
+            "MailChat"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/arrake0101/mailchat/releases/download/v$version/MailChat_$version_x64-portable.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
+        }
+    }
+}
